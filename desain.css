@@ -1,0 +1,154 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f0f4f8; /* Warna latar belakang yang lebih lembut */
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* Memastikan body memenuhi tinggi layar */
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  display: flex;
+  flex: 1; /* Memastikan container mengisi ruang yang tersisa */
+}
+
+aside {
+  width: 300px;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-right: 20px;
+}
+
+aside img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; /* Efek hover sederhana */
+}
+
+aside img:hover {
+  transform: scale(1.05);
+}
+
+aside h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #bd4aa0; /* Warna yang lebih unik */
+}
+
+aside p {
+  font-style: italic;
+  color: #777777;
+}
+
+aside a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #fff;
+  background-color: #318cc4;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+aside a:hover {
+  background-color: #ad5190;
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+}
+
+main section {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+main h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #33b1d1;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+#hobbies .hobby-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.hobby-card {
+  width: 300px;
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.hobby-card:hover {
+  transform: translateY(-5px);
+}
+
+.hobby-card i {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #bd353c;
+}
+
+.hobby-card h4 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  background-color: #34495e;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  aside {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  .hobby-card {
+    width: 100%;
+  }
+}
