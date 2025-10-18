@@ -1,0 +1,205 @@
+/* Reset default browser styles */
+body, h1, h2, h3, p, ul, li, section, header, footer, aside {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: 'Nunito', sans-serif; /* Font yang ceria dan mudah dibaca */
+    line-height: 1.6;
+    background-color: #261a15; /* Cokelat sangat tua (hampir hitam) */
+    color: #f0f0d4; /* Krem pucat */
+    padding: 20px;
+
+    /* CSS Grid Container */
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-rows: auto 1fr auto; /* Tinggi header dan footer otomatis, konten utama mengisi sisa ruang */
+    min-height: 100vh; /* Memastikan grid mengisi seluruh tinggi layar */
+}
+
+header {
+    grid-area: header;
+    background-color: #513c2f; /* Cokelat tua */
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-areas:
+        "about"
+        "hobbies"
+        "contact";
+    gap: 20px;
+}
+
+/* Flexbox for navigation menu */
+header nav ul {
+    display: flex;
+    justify-content: center; /* Mengatur item menu ke tengah */
+    list-style: none;
+    padding: 0;
+}
+
+header nav li {
+    margin: 0 1rem;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section.about {
+    grid-area: about;
+}
+
+section.hobbies {
+    grid-area: hobbies;
+}
+
+section.contact {
+    grid-area: contact;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #33241e; /* Cokelat sangat tua */
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+section {
+    background-color: #8d6e63; /* Cokelat sedang */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan halus */
+}
+
+section h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid #6d4c41; /* Cokelat tua */
+    padding-bottom: 0.5rem;
+    color: #f0d4bb; /* Krem pucat */
+}
+
+section p {
+    font-size: 1.1rem;
+    color: #d7ccc8; /* Cokelat muda */
+}
+
+.about img {
+    width: 150px;
+    height: 150px; /* Tambahkan tinggi agar lingkaran sempurna */
+    border-radius: 50%;
+    object-fit: cover; /* Memastikan gambar mengisi lingkaran */
+    object-position: center; /* Memastikan gambar terpusat */
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.divider {
+    border: none;
+    height: 2px;
+    background-color: #6d4c41; /* Cokelat tua */
+    margin: 20px 0;
+}
+
+.hobbies ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hobbies li {
+    background-color: #795548; /* Cokelat sedang */
+    padding: 0.75rem 1.25rem;
+    margin: 0.5rem;
+    border-radius: 20px;
+    font-size: 1rem;
+    color: #f0d4bb; /* Krem pucat */
+    transition: background-color 0.3s ease;
+}
+
+.hobbies li:hover {
+    background-color: #513c2f; /* Cokelat tua */
+    color: #fff;
+}
+
+.contact {
+    text-align: center;
+}
+
+.contact a {
+    color: #8d6e63; /* Cokelat sedang */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+    color: #f0d4bb; /* Krem pucat */
+}
+
+.contact .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #513c2f; /* Cokelat tua */
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.contact .btn:hover {
+    background-color: #33241e; /* Cokelat sangat tua */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    header h2 {
+        font-size: 1.2rem;
+    }
+    .about img {
+        width: 120px;
+        height: 120px; /* Sesuaikan tinggi juga */
+    }
+    .hobbies ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hobbies li {
+        margin: 0.5rem 0;
+    }
+
+    header nav ul {
+        flex-direction: column; /* Mengubah orientasi menu navigasi menjadi vertikal */
+        align-items: center; /* Mengatur item menu ke tengah */
+    }
+
+    header nav li {
+        margin: 0.5rem 0;
+    }
+}
