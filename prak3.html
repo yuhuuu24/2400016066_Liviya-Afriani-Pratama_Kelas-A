@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App + Dynamic Page</title>
+    <link rel="stylesheet" href="P3.css">
+</head>
+<body>
+    <div class="settings">
+        <label>Background Color: </label>
+        <select id="bgColorSelector">
+            <option value="white">White</option>
+            <option value="lightgray">Light Gray</option>
+            <option value="lightblue">Light Blue</option>
+            <option value="lightyellow">Light Yellow</option>
+        </select>
+
+        <label>Font Size: </label>
+        <input type="range" id="fontSizeControl" min="12" max="30" value="16">
+
+        <button id="darkModeToggle">Toggle Dark Mode</button>
+
+        <label>Font Style: </label>
+        <select id="fontStyleSelector">
+            <option value="sans-serif">Sans-serif</option>
+            <option value="serif">Serif</option>
+        </select>
+    </div>
+
+    <div class="container">
+        <h2>My To-Do List</h2>
+        <input type="text" id="newTask" placeholder="Add a new task...">
+        <button onclick="addTask()">Add</button>
+        <ul id="taskList"></ul>
+    </div>
+
+    <script src="dom.js"></script>
+</body>
+</html>
