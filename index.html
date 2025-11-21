@@ -1,42 +1,92 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="id">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Indonesia Facts</title>
 
-    <title>Portofolio Budi Santoso</title>
-
+  <!-- TAILWIND CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<body class="bg-gradient-to-br from-indigo-100 to-indigo-200 min-h-screen flex flex-col items-center justify-center px-4">
 
-<body>
+  <!-- TITLE -->
+  <h1 class="text-4xl font-bold text-gray-900 mb-8 flex items-center gap-3">
+    <span class="text-5xl">🔎</span>
+    Random Indonesia Facts
+  </h1>
 
-    <h1>Liviya Afriani Pratama</h1>
+  <!-- FACT CARD -->
+  <div id="factBox" class="bg-white w-full max-w-xl p-8 rounded-2xl shadow-xl text-center text-lg text-gray-700 leading-relaxed mb-6">
+      Klik tombol untuk melihat fakta Indonesia!
+  </div>
 
-    <h2>Mahasiswa Sistem Informasi</h2>
+  <!-- BUTTON -->
+  <button onclick="generateFact()"
+    class="flex items-center gap-2 bg-indigo-500 hover:bg-indigo-600 text-white font-semibold px-6 py-3 rounded-xl shadow-md transition">
+    <span class="text-xl">🔄</span>
+    Get Another Random Fact
+  </button>
 
+  <!-- SOURCE -->
+  <p class="text-sm text-gray-600 mt-6">
+    Sumber: daftar fakta Indonesia (Kalimantan, Sulawesi, Papua, Bali & Nusa Tenggara)
+  </p>
 
-    <p>Halo! Saya adalah seorang mahasiswa yang bersemangat untuk belajar tentang pengembangan web. Saya suka memecahkan masalah dan menciptakan aplikasi yang berguna bagi orang lain.</p>
+  <!-- JAVASCRIPT -->
+  <script>
+    const indonesiaFacts = [
+        "Kalimantan adalah bagian Indonesia dari pulau terbesar ketiga di dunia, Borneo.",
+        "Hutan hujan Kalimantan adalah rumah bagi orangutan kalimantan yang terancam punah.",
+        "Sungai Kapuas di Kalimantan Barat adalah salah satu sungai terpanjang di Indonesia.",
+        "Taman Nasional Tanjung Puting populer untuk wisata konservasi orangutan.",
+        "Kalimantan menyimpan cadangan batubara dan mineral yang besar bagi ekonomi nasional.",
+        "Suku Dayak memiliki seni ukir, tato, dan rumah panjang yang khas budaya Kalimantan.",
+        "Ekosistem rawa gambut Kalimantan sangat penting untuk penyimpanan karbon global.",
+        "Kalimantan memiliki spesies endemik seperti bekantan (monyet hidung panjang).",
+        "Pemindahan ibu kota negara ke Kalimantan dimaksudkan untuk pemerataan ekonomi.",
+        "Ada kebudayaan ritual dan festival tradisional Dayak yang memikat wisatawan budaya.",
 
+        "Sulawesi memiliki bentuk pulau unik dengan banyak teluk dan semenanjung.",
+        "Taman Nasional Bunaken di Sulawesi Utara adalah salah satu lokasi menyelam terbaik di dunia.",
+        "Suku Toraja terkenal dengan tradisi pemakaman dan rumah adat Tongkonan.",
+        "Sulawesi memiliki biodiversitas laut yang sangat tinggi.",
+        "Kopi Toraja terkenal di pasar internasional.",
+        "Anoa adalah hewan endemik Sulawesi.",
+        "Tradisi Rambu Solo’ Toraja dikenal dunia.",
+        "Sulawesi memiliki banyak konservasi laut dan terumbu karang.",
+        "Gunung berapi dan karst Sulawesi menciptakan lanskap dramatis.",
+        "Pesisir Sulawesi memiliki sejarah perdagangan panjang.",
 
-    <img src="/foto tekweb foto gua.jpg" alt="Foto profil Liviya Afriani Pratama">
+        "Papua punya keanekaragaman hayati terbesar di Indonesia.",
+        "Cendrawasih adalah burung khas Papua yang terkenal dunia.",
+        "Papua memiliki pegunungan tinggi dan hutan tropis lebat.",
+        "Suku-suku Papua memiliki seni ukir dan tradisi unik.",
+        "Tambang Grasberg di Papua adalah salah satu yang terbesar dunia.",
+        "Papua adalah habitat kasuari, burung besar yang langka.",
+        "Raja Ampat adalah destinasi diving terbaik dunia.",
+        "Papua menjaga budaya lokal yang sangat kuat.",
+        "Festival budaya Papua terkenal kaya warna.",
+        "Ekosistem mangrove Papua mendukung komunitas nelayan tradisional.",
 
+        "Bali terkenal sebagai pusat wisata dunia dengan budaya Hindu-nya yang unik.",
+        "Tarian Kecak Bali dikenal secara internasional.",
+        "Gunung Rinjani di NTB adalah salah satu gunung terindah di Indonesia.",
+        "Danau Kelimutu di Flores memiliki tiga warna yang berubah-ubah.",
+        "Pulau Komodo adalah rumah bagi kadal terbesar di dunia, komodo.",
+        "Pantai Pink di Lombok memiliki pasir berwarna merah muda yang langka.",
+        "Bali memiliki sistem subak yang diakui UNESCO.",
+        "Tenun ikat NTT diakui dunia sebagai karya seni tradisional.",
+        "Labuan Bajo adalah gerbang menuju Taman Nasional Komodo.",
+        "Pulau Gili di NTB terkenal untuk snorkeling tanpa kendaraan bermotor."
+    ];
 
-    <h3>Hobi Saya:</h3>
-
-    <ul>
-
-        <li>Membaca buku komik</li>
-
-        <li>Bermain game</li>
-
-        <li>Menonton one piece</li>
-
-    </ul>
-
-
-    <p>Kunjungi profil LinkedIn saya di <a href="https://www.linkedin.com/in/contohprofil">sini</a>.</p>
-
+    function generateFact() {
+        const factBox = document.getElementById("factBox");
+        const randomIndex = Math.floor(Math.random() * indonesiaFacts.length);
+        factBox.textContent = indonesiaFacts[randomIndex];
+    }
+  </script>
 
 </body>
-
 </html>
